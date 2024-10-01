@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplicación 1</title>
+    <!-- Estilos-->
+    <link href="./bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <style>
+      h1{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        letter-spacing: 2px;
+      }
+      .cajas1{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        border: 1px solid black;
+        height: 200px;
+        align-items: end;
+      }
+      .parrafos{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+        border: 1px solid black;
+        margin-bottom: 5px;
+      }
+      .textos{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        border: 1px solid black;
+        margin-bottom: 5px;
+        align-items: baseline;
+      }
+
+      .colores{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-evenly; */
+        height: 200px;
+        width:300px;
+        border:1px solid black;
+        margin-bottom: 5px;
+      }
+
+      .colores--red{
+        background-color: red;
+        color: white;
+      }
+      .colores--green{
+        background-color: green;
+        color: white;
+      }
+      .colores--blue{
+        background-color: blue;
+        color: white;
+      }
+      .colores--amarillo{
+        background-color: yellow;
+        color: white;
+      }
+      .colores2{
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+    <h1>Initial Aplication</h1>
+    </div>
+    <!-- align-items
+     Significa que la propiedad align-items defina la forma en que el navegador
+     distribuye -->
+    <div class="cajas1">
+    <button type="button" class="btn btn-success">Locura</button>
+    <button type="button" class="btn btn-danger">Peligro</button>
+    <button type="button" class="btn btn-danger">Peligro</button>
+    </div>
+    <div class="parrafos">
+      <p>Parrafo 1</p>
+      <p>Parrafo 2</p>
+      <p>Parrafo 3</p>
+    </div>
+    <div class="textos">
+      <h1>Titulo 1</h1>
+      <h2>Titulo 2</h2>
+      <p>Parrafo 3</p>
+    </div>
+
+    <div class="colores">
+      <div class="colores--red">Rojo</div>
+      <div class="colores--green">Verde</div>
+      <div class="colores--blue">Azul</div>
+    </div>
+
+    <div class="colores2">
+      <div class="colores--red">Rojo</div>
+      <div class="colores--green">Verde</div>
+      <div class="colores--blue">Azul</div>
+      <div class="colores--amarillo">Amarillo</div>
+    </div>
+  </body>
+</html>
