@@ -1,0 +1,124 @@
+<!--  Ejercicio Resumen - Cajas / Animaciones y Transiciones
+1.- Crear estructura html que cuente con un Contenedor General, cabecera, menú, 
+barra lateral, sección de contenido principal, elementos dentro del contenedor 
+principal y footer 
+2.- Todo el contenido debe estar dentro del contenedor general y su ancho será 
+de 1200px
+3.- Header debe ocupar el 100% del ancho y tener un texto grande.
+4.- Menú debe tener los elementos uno al lado del otro. Debe disponer de un menú desplegable en diversos elementos.
+5.- El contenido principal debe tener un ancho del 70%. 
+6.- El contenido dentro del contenedor principal debe ser una cuadrícula
+con cuatro líneas de 2 cajas.
+7.- La barra lateral debe tener un ancho del 30%
+8.- El footer debe tener un ancho del 100% y estar al final del todo.
+
+Aspectos adicionales:
+- Caja Libre 1 y 2 (repasar z-index)
+- Caja Fija a la izquierda
+- Animaciones y Transiciones (formulario y caja) -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplicación - Modelo Cajas</title>
+
+    <!-- Linkeamos estilos -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <!-- Cabecera -->
+      <header class="header">
+        <h1 class="header__title">Modelo de Cajas</h1>
+        <h2 class="header__subtitle">CSS Avanzado</h2>
+      </header>
+      <!-- barra de navegación -->
+      <nav class="navbar">
+        <ul class="navbar__list">
+          <li class="list__item"><a href="#">Inicio</a></li>
+          <li class="list__item">
+            <a href="#">Contenido</a>
+            <ul class="item__sublist">
+              <li class="sublist__item">Peliculas</li>
+              <li class="sublist__item">Juegos</li>
+          </ul>
+        </li>
+          <li class="list__item">
+          <a href="#">Blog</a>
+          <ul class="item__sublist">
+            <li class="sublist__item"></li>
+            <li class="sublist__item"></li>
+          </li>
+        </ul>
+        <li class="list__item"><a href="#">Contacto</a></li>
+      </nav>
+      <!-- inicio sección principal -->
+      <section class="content">
+        <h1 class="content__title">Contenido Principal - Cajas</h1>
+        <div class="content__box">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim
+          reiciendis dolor facilis eum dicta consequatur. Enim, nam tempora
+          consectetur quas sed necessitatibus, aliquid error vel consequatur
+          cupiditate eaque numquam provident.
+        </div>
+        <div class="content__box">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos
+          asperiores cum nesciunt inventore voluptates. Ut, nostrum quasi ab
+          obcaecati exercitationem veritatis voluptatem nemo, sed provident
+          voluptate eaque consectetur hic iste!
+        </div>
+        <div class="content__box">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. At, sapiente
+          dolorem. Repellat blanditiis reiciendis atque dolores inventore
+          deserunt eius quod? Et, dignissimos unde! Vitae, veniam ullam hic
+          mollitia velit facilis!
+        </div>
+        <div class="content__box">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
+          quisquam! Totam, assumenda quidem accusamus dolorem obcaecati
+          dignissimos saepe vitae sit consequatur aliquam beatae eos qui laborum
+          provident tempore, nam quod?
+        </div>
+      </section>
+
+      <aside class="aside">
+        <h2 class="sidebar__title">Caja lateral</h2>
+        <p class="sidebar__text">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi
+          temporibus magnam repellendus enim magni, officia exercitationem eum
+          minima veniam, iure sed, vel quod velit sunt obcaecati libero
+          molestias quam corporis!
+        </p>
+        <p class="sidebar__text">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo impedit
+          assumenda perferendis voluptas quasi reprehenderit quas possimus
+          tempora laboriosam obcaecati nisi, dolor inventore pariatur numquam
+          aperiam at consequuntur placeat fugiat?
+        </p>
+        <p class="sidebar__text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Exercitationem dolor qui quibusdam earum laudantium omnis nihil culpa
+          consectetur vitae ullam pariatur vero a similique maiores optio,
+          officia quo rem aliquam!
+        </p>
+        <p class="sidebar__text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad porro
+          dolorum ipsum, maxime corporis culpa nulla nemo inventore temporibus
+          dolor incidunt reprehenderit molestias minima fugiat expedita nobis
+          voluptates. Voluptates, explicabo?
+        </p>
+        <p class="sidebar__text">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore
+          incidunt saepe qui magni maiores voluptate enim, aperiam iste velit
+          repellendus, pariatur placeat corrupti dolor exercitationem
+          voluptatibus in accusamus similique. Non!
+        </p>
+      </aside>
+      <!-- pie de pagina -->
+      <footer class="foot">
+        Todos los derechos &copy; Alejandro Mateo Aguilar 
+      </footer>
+    </main>
+  </body>
+</html>
