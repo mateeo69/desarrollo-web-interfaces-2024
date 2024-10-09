@@ -1,0 +1,73 @@
+/*Reseteo estilos */
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container{
+    border: 1px solid black;
+}
+
+.container__title, .container__subtitle{
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+.container__subtitle{
+    border-bottom: 1px solid black;
+}
+
+.container__layout{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    /*flex-direction: row;
+    flex-wrap: wrap; Este display con flex-directin row es equivale a float left */
+    width: 100%;
+    height: 700px;
+    border: 2px solid black;
+}
+
+.layout__box{
+    /* float: left; */
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color:white;
+    padding: 20px;
+    border: 2px solid black;
+    margin: 5px;
+    width: 20.5%;
+    /* flex-grow: 1; */
+    /* width: 24.5%;*/
+    flex-basis: calc((100%/4));
+    align-self: center;
+}
+
+.layout__box--red{
+    background-color: red;
+    /*flex-grow: 1; */
+}
+
+.layout__box--yellow{
+    background-color: yellow;
+}
+
+.layout__box--green{
+    background-color: green;
+}
+
+.layout__box--orange{
+    background-color: orange;
+}
+
+.layout__box--blue{
+    background-color: blue;
+}
+
+.layout__box--cyan{
+    background-color: cyan;
+}

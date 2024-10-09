@@ -9,8 +9,8 @@
 
 /*Inicialización de variables*/
 :root{
-    --color-primary: lightblue;
-    --color-secondary: rgb(070,130,180);
+    --color-primary: rgb(070R 130G 180B);
+    --color-secondary: lightblue;
     --maxWidth: 1200px;
     --color-letter: white;
 }
@@ -29,6 +29,7 @@ html{
     width: var(--maxWidth);
     border: 1px solid black;
     margin: 0 auto;
+    height: 1340px;
 }
 
 .header{
@@ -64,9 +65,9 @@ html{
     /*display: inline-block;
     */float: left;
     line-height: 40px;
-    /*Centrar respect al al todeelcontenedorenelquenosencontramos*/border-right: 1px solid black;
+    /*Centrarrespectoalaltodeelcontenedorenelquenosencontramos*/
+    border-right: 1px solid black;
     justify-content: space-around;
-    
 }
 .list__item a{
     color: var(--color-letter);
@@ -77,14 +78,14 @@ html{
     border-left: 1px solid black;
 } */
 
+.list__item:first-child{
+    border-left: 1px solid black;
+}
 
 .list__item:hover{
-    background-color: lightblue;
+    background-color: purple;
     transform: scale(1.05);
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    -o-transform: scale(1.05);
+
     transition: background-color 0.5s;
     -webkit-transition: background-color 0.5s;
     -moz-transition: background-color 0.5s;
@@ -92,54 +93,216 @@ html{
     -o-transition: background-color 0.5s;
 }
 
-.item__sublist{
-    /*Opción1display: none;
-    Positionabsoluteparaquealmostrarselositemsnomuevalapágina*//*Opcion2*/position: absolute;
+.item_sublist{
+    /*Opcion 1*/
+    /*display: none; Hace que el submenú no se despliegue automaticamente*/
+    position: absolute;
+    /*Opcion 2*/
     max-height: 0px;
     overflow: hidden;
     background: linear-gradient(var(--color-primary), var(--color-secondary));
-    width: 100px;
-    box-shadow: 0px 2px 4px grey;
+    width: 120px;
+    box-shadow: 0px 2px 4px gray;
     z-index: 10;
     background-color: var(--color-secondary);
-    padding-right: 25px;
-
-    transition: all 500ms ease-in-out;
-    -webkit-transition: all 500ms ease-in-out;
-    -moz-transition: all 500ms ease-in-out;
-    -ms-transition: all 500ms ease-in-out;
-    -o-transition: all 500ms ease-in-out;
+    /*All: modifica todo, siguiente parametro la duración, último el tipo de transición*/
+    transition: all 0.5s ease-in-out; 
+    -moz-transition: all 0.5s ease-in-out;
 }
 
-.list__item:hover > .item__sublist {
-    /*Opcion 1 display: block;
-    */max-height: 400px;
-    border-radius: 5%;
+.sublist_item:hover{
+    background-color: purple;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
 
-    -webkit-border-radius: 5%;
-    -moz-border-radius: 5%;
-    -ms-border-radius: 5%;
-    -o-border-radius: 5%;
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -ms-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
 }
 
-.sublist__item{
-    width: 100px;
-    padding-left: 23px;
-}
-.sublist__item:hover{
-    background-color: lightblue;
+.list__item:hover > .item_sublist{
+   /* display: block; */
+
+   /*Opcion 2*/
+   max-height: 400px;
+   border-radius: 5%;
 }
 
-/*Contenido */
-
+/*Contenido Principal*/
 .content{
     width: 69%;
-    border: 1px solid rgb(070,130,180);
+    border: 1px solid var(--color-primary);
     float: left;
-    height: (var(--maxWidth));
+    height: var(--maxWidth);
+}
+
+.content__title{
+    text-align: center;
+    border-bottom: 1px solid gray;
+    padding: 20px;
+    text-shadow: 0px 4px 4px gray;
+}
+
+.content__box{
+    width: 40%;
+    border: 1px solid var(--color-primary);
+    background-color: aliceblue;
+    float: left;
+    margin: 20px;
+    padding: 20px;
+    text-align: justify;
+    box-shadow: 5px 5px 5px gray;
+}
+
+.content__box--redondo{
+    border-radius: 100px;
+}
+
+.content__box--sombra{
+    box-shadow: 5px 5px 10px gray inset;
+}
+
+.content__box--shadows1{
+    /* los valores de unidades entregadas a box-shadow son los siguientes:
+        Desplazamiento de la sombra en la horizontal
+        Desplazamiento de la sombra en vertical
+        Desenfoque de la sombra
+        Propagación de la sombra
+        Color aplicado */
+        box-shadow: 2px 2px 10px 10px gray;
+}
+
+.content__box--3d{
+    box-shadow: 14px 14px 20px 0 gray;
+}
+.content__box--shadowsMultiple{
+    box-shadow: -1px -1px 6px 0px black, 4px 4px 16px 2px gray;
+}
+
+.content__box--shadowsMultiple2{
+    box-shadow: 2px 2px 8px 0 blue, 4px 4px 24px 0 black, 0px 0px 48px 2px yellow;
 }
 
 .aside{
     width: 30.8%;
     float: left;
+    height: 300px;
+    text-align: center;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+.box__free{
+    position: absolute;
+    border: 1px solid black;
+    color: white;
+    width: 100px;
+    height: 100px;
+    font-size: 14px;
+    /* float: left; */
+}
+.box__free--1{
+    background-color: bisque;
+    top: 500px;
+    margin-left: 100px;
+}
+
+.box__free--2{
+    background-color: lightcoral;
+    bottom: 200px;
+}
+
+.box__static{
+    position: fixed;
+    width: 100px    ;
+    height: 400px;
+    background-color: yellowgreen;
+    z-index: 999;
+    border: 1px solid gray;
+    left: 0;
+    top: 0;
+}
+
+.transformed{
+    width: 50px;
+    height: 50px;
+    background-color: lightcoral;
+    margin: 20px;
+    float:left;
+
+    /* transform: rotate(45deg); */
+    animation-name: rotar;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes rotar {
+    0%{
+        transform: rotate(0deg);
+    }
+    33%{
+        transform: rotate(90deg);
+    }
+    66%{
+        transform: rotate(270deg);
+        border-radius: 100px;
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.box__animated{
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    background-color: beige;
+    padding: 20px;
+    font-size: 20px;
+    animation: girando 10s infinite linear;
+}
+
+@keyframes girando{
+    0%{
+        margin-left: 50px;
+        transform: rotate(0deg);
+    }
+    30%{
+        margin-left: 500px;
+        transform: rotate(90deg);
+    }
+    60%{
+        margin-left: 1000px;
+        transform: rotate(270deg);
+        border-radius: 100px;
+        background-color: blue;
+    }
+    100%{
+        margin-left: 50px;
+        transform: rotate(0deg);
+    }
+}
+
+.box__container{
+    height: 500px;
+    width: 500px;
+    border: 1px solid black
+}
+
+.box__free--3{
+    background-color: green;
+    top: 500px;
+    margin-left: 200px;
+}
+
+.box__free--4{
+    background-color: yellow;
+    bottom: 50px;
 }
