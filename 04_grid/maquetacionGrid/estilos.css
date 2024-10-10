@@ -15,17 +15,17 @@
 }
 .container__header{
     /* Añadir aquí Flex y Align y/o justify */
-    display: flex;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    align-items: center;
     justify-content: space-between;
-    text-align: center;
     height: 120px;
     border-bottom: 1px solid rgba(226,225,226, 0.8);    
 }
 
 .container__logo{
     /* Añadir aquí Flex */
-    align-items: center;
-    display: flex;    
+    
     padding: 10px;
     margin-left: 20px;
     color: black;
@@ -35,7 +35,6 @@
 /* flex-grow: 0  --> valor por defecto y así cada caja ocupa el espacio que toque. */
 /* flex-grow: 1  --> cada elemento ocupa el mismo espacio del tamaño disponible. */
 .container__logo h1{
-    flex-grow: 1;
     font-family: Helvetica, Arial, sans-serif;
     font-style: italic;
     font-weight: 900;
@@ -44,13 +43,15 @@
 
 .header__menu{
     /* Añadir aquí Flex */
-    display: flex;
+    display: grid;
     height: 100%;
 }
 .menu__list{
     /* Añadir aquí Flex y Align y/o justify */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
-    display: flex;
+    justify-content: space-between;
     height: 100%;
     list-style: none;
 }
@@ -73,23 +74,24 @@
 /* contenido */
 .content{
     /* Añadir aquí Flex y Align y/o justify */
-    display: flex;
-    flex-direction: row;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: start;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .content__projects{
     /* Añadir aquí Flex y Align y/o justify */
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
 }
 .projects__project{
     /* Añadir aquí Flex */
-    display: flex;
-    flex-wrap: wrap;
-    flex-basis: 23.5%;
-    flex-direction: column;
-    margin-bottom: 15px;
+
+
+    margin-bottom: 25px;
     margin-right: 20px;
     border: 1px solid #ccc;
 }
@@ -97,9 +99,7 @@
     width: 100%;
 }
 .projects__project-info{
-    padding-top: 45px;
-    padding-left: 10px;
-    padding-bottom: 10px;
+    padding: 10px;
 }
 .projects__project-info a{
     font-size: 16px;
@@ -125,10 +125,9 @@
 /* barra lateral */
 .content__lateral{
     /* Añadir aquí Flex */
-    display: flex;
-    flex-basis: 25%;
-    flex-direction: column;
-    margin-right: 70px;
+    display: grid;
+
+    margin-right: 30px;
     padding: 15px;
 }
 .lateral__title{
@@ -173,18 +172,17 @@
 /* Footer */
 .content__footer{
     /* Añadir aquí Flex y Align y/o justify */
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 6fr 1fr;
     align-items: center;
+
     height: 120px;
     border-top: 1px solid rgba(226,225,226, 0.8);
 }
 .footer__logoFooter{
     /* Añadir aquí Flex y order */
-    display: flex;
-    order: 2;
+
+
     padding: 10px;
     margin-left: 20px;
     font-family: Helvetica, Arial,  sans-serif;
@@ -201,7 +199,8 @@
 
 .footer__info{
     /* Añadir aquí Flex y Order */
-    order: 1;
+    grid-row: 1/2;
+
     opacity: 0.7;
     margin-left: 20px;
 }
